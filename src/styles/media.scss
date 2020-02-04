@@ -1,0 +1,43 @@
+@import './variable.scss';
+@import './mixins.scss';
+@media (max-width:1366px) {
+ .subheading-small {
+  font-size: .85rem !important;
+  font-weight: 600 !important;
+ }
+}
+
+@media (max-width:$LOGIN_MESSAGE_MAX_WIDTH) {
+ .login-message-wrapper {
+  display: none !important;
+ }
+ .login-signin-wrapper {
+  display: block !important;
+  max-width: $ONE_HUNDERED !important;
+  flex-basis: $ONE_HUNDERED !important;
+  @include mb(3%);
+ }
+ footer {
+  display: block !important;
+ }
+}
+
+@media (max-width:$PROFILE_BANNER_MAX_WIDTH) {
+ .paper-banner {
+  justify-items: center;
+  flex-grow: 1;
+  width: 270px !important;
+  height: auto !important;
+  & img {
+   width: 120% !important;
+   text-align: center;
+   height: 130% !important;
+  }
+  margin-bottom: 50px !important;
+  & button {
+   position: absolute;
+   bottom: 0;
+   padding: 5px;
+  }
+ }
+}

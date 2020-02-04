@@ -1,0 +1,71 @@
+{
+  "name": "cra-practice",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@date-io/date-fns": "^1.0.1",
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "@tinymce/tinymce-react": "^3.0.1",
+    "@types/date-fns": "^2.6.0",
+    "@types/form-data": "^2.2.1",
+    "@types/joi": "^14.3.2",
+    "@types/jwt-decode": "^2.2.1",
+    "@types/node": "^11.10.5",
+    "@types/react": "^16.8.7",
+    "@types/react-dom": "^16.8.2",
+    "@types/react-redux": "^7.0.2",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/redux-persist": "^4.3.1",
+    "@types/redux-persist-transform-encrypt": "^2.0.1",
+    "@types/redux-thunk": "^2.1.0",
+    "axios": "^0.18.0",
+    "currency.js": "^1.2.1",
+    "date-fns": "^2.0.0-alpha.21",
+    "form-data": "^2.3.3",
+    "jwt-decode": "^2.2.0",
+    "material-ui-chip-input": "^1.0.0-beta.15",
+    "material-ui-datetimepicker": "^1.0.7",
+    "material-ui-image": "^3.1.0",
+    "material-ui-pickers": "^2.1.2",
+    "react": "^16.8.5",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.8.5",
+    "react-redux": "^6.0.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.8",
+    "react-to-print": "^2.0.0-alpha-6",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-persist": "^5.10.0",
+    "redux-persist-transform-encrypt": "^2.0.1",
+    "redux-reset": "^0.3.0",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/enzyme": "^3.1.18",
+    "@types/enzyme-adapter-react-16": "^1.0.4",
+    "@types/jest": "^24.0.9",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
+    "node-sass": "^4.11.0"
+  }
+}

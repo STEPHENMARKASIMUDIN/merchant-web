@@ -1,0 +1,114 @@
+@import './variable.scss';
+@mixin mid($width) {
+ display: block;
+ max-width: $width !important;
+ margin: 0 auto;
+}
+
+@mixin mt($margin) {
+ margin-top: $margin !important;
+}
+
+@mixin mb($margin) {
+ margin-bottom: $margin !important;
+}
+
+@mixin mr($margin) {
+ margin-right: $margin !important;
+}
+
+@mixin ml($margin) {
+ margin-left: $margin !important;
+}
+
+@mixin pt($top) {
+ @if($top) {
+  padding-top: $top !important;
+ }
+ @else {
+  padding-top: 0 !important;
+ }
+}
+
+@mixin custom-border($width, $style, $color) {
+ @if($style) {
+  $style: $style
+ }
+ @else {
+  $style: solid;
+ }
+ border: $width $style $color;
+}
+
+@mixin d-none {
+ display: none !important;
+}
+
+@mixin d-inline {
+ display: inline-block !important;
+}
+
+@mixin border-bottom($height) {
+ @if ($height) {
+  border-bottom: $height solid $PRIMARY_COLOR !important;
+ }
+ @else {
+  border-bottom: 1px solid $PRIMARY_COLOR !important;
+ }
+}
+
+@mixin border-black() {
+ border-top: 1px solid $BLACK;
+ border-bottom: 1px solid $BLACK;
+ border-right: 1px solid $BLACK;
+ border-left: 1px solid $BLACK
+}
+
+@mixin pr($right) {
+ @if($right) {
+  padding-right: $right !important;
+ }
+ else {
+  padding-right: 0 !important;
+ }
+}
+
+@mixin pb($bottom) {
+ @if($bottom) {
+  padding-bottom: $bottom !important;
+ }
+ else {
+  padding-bottom: 0 !important;
+ }
+}
+
+@mixin pl($left) {
+ @if($left) {
+  padding-left: $left !important;
+ }
+ else {
+  padding-left: 0 !important;
+ }
+}
+
+@mixin pad($padding) {
+ @if($padding) {
+  padding: $padding !important;
+ }
+ else {
+  padding: 0 !important;
+ }
+}
+
+@mixin txt-center {
+ text-align: center !important;
+}
+
+
+@mixin whito($isImportant){
+  @if($isImportant == 1){
+    color : $WHITO !important;
+  }else{
+    color : $WHITO;
+  }
+}

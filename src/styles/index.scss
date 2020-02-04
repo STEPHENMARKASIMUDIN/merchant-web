@@ -1,0 +1,1074 @@
+@import './variable.scss';
+@import './mixins.scss';
+@import './media.scss';
+
+body {
+ margin: 0;
+ padding: 0;
+ font-family: "Roboto", sans-serif !important;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ transition: all 0.35s ease-in-out;
+ &.dark-theme{
+   background-color: $DARK_THEME_BG !important;
+   footer,button[disabled],h2,h3,svg:not(.theme-icon),p:not(.default){
+      @include whito(1);
+   }
+   p.error-helper-text{
+    color : #ef5350!important
+   }
+
+   #picker-popover{
+     & svg {
+      color:$DARK_COLOR !important;
+     }
+     & span,& p{
+      @include whito(1);
+     }
+     & div:nth-child(3),& div:nth-child(2){
+      background-color: $DARK_THEME_BG;
+     }
+    
+   }
+
+   div[role="tooltip"]{
+  
+      & div{
+        background: $WHITO !important;
+        color : black   !important;
+      }
+   }
+   
+   #logout > div:first-child{
+    background-color: $DARK_THEME_BG !important;
+   }
+   .login-message,.login_wrapper,.reset-password-wrapper,.signup_wrapper,.paper,.dashboard-footer,#orders-tab,#add-product-paper,.panel{
+    background-color: $DARK_THEME_BG !important;
+    .chip-input{
+      & span{
+        color: $BLACK !important;
+      }
+    }
+
+    th,td,h2,h5,h4.d-inline,h6,label,input,#select-country,#select-payment_method,#select-select_payment_received,.card-title,#select-product_type{
+      color: $WHITO ;
+      & span{
+        color: $WHITO ;
+      }
+    }
+    & span{
+      color: $WHITO ;
+    }
+
+    svg {
+      color: $WHITO  !important;
+    }
+   }
+   #custom-popover p{
+     color: $BLACK !important;
+   }
+   .side-parent div:first-child{
+    background-color: $DARK_THEME_BG;
+    div.image-sidebar div:first-child{
+      background-color: $PRIMARY_COLOR;
+    }
+    & a  span{
+      @include whito(1);
+    }
+   }
+   .modal-content,.modal-actions{
+    background-color: $DARK_THEME_BG;
+    input,label{
+      color: $WHITO ;
+    }
+   }
+   .merchant-container{
+    background-color: $DARK_THEME_BG;
+    & h5,td,th,p,svg{
+      color: $WHITO ;
+    }
+   }
+   #dashboard,.report-card{
+    background-color: $DARK_THEME_BG;
+    & h5,td,th{
+      color: $WHITO ;
+    }
+   }
+
+   .arrow-up{
+     background-color: $WHITO !important;
+     & svg{
+       color : $DARK_THEME_BG !important;
+     }
+   }
+
+   #my-account-body, #payment-received{
+    background-color:$DARK_THEME_BG  !important;
+    & textarea{
+      color :  $WHITO!important;
+    }
+   }
+
+   
+ }
+}
+
+#banner-image-id{
+  background-size: cover;
+  width:450px !important;
+  height: 650px !important;
+}
+
+.modal-actions{
+  padding: 8px 4px !important;
+  margin: 0px !important;
+}
+
+// .datepicker{
+//   & div{
+//     & input{
+//       padding-right: 0px !important;
+//     }
+//   }
+// }
+.icon-add-image {
+ & div svg {
+  cursor: pointer;
+  color: $DARK_COLOR;
+ }
+}
+
+.paper {
+ @include pad(20px);
+ border: 1px solid rgba(223, 221, 221, 0.986);
+ border-radius: 6px;
+ box-shadow: 2px 3px 3px grey;
+}
+
+.d-inline {
+ display: inline-block !important;
+}
+
+.w-15 {
+ width: 15%;
+}
+
+.table-tr-1 {
+ width: 6% !important;
+ @include txt-center;
+}
+
+.table-tr-2 {
+ width: 10% !important;
+ @include txt-center;
+}
+
+.table-tr-3 {
+ width: 100px !important;
+ @include txt-center;
+}
+
+.table-tr-4 {
+ width: 200px;
+ @include txt-center;
+}
+
+.table-tr-5 {
+ width: 20%;
+ @include txt-center;
+}
+
+.table-tr-6 {
+ width: 209px;
+ @include txt-center;
+}
+
+.table-tr-7 {
+ width: 180px;
+ @include txt-center;
+}
+
+.table-tr-8 {
+ width: 280px;
+ @include txt-center;
+}
+
+;
+
+.table-tr-9 {
+ width: 80px;
+ @include txt-center;
+}
+
+.size-icon-report {
+ font-size: 20px;
+}
+
+//1 -  0.25
+//2 - .5
+//3 - spacer
+//4 - 1.5;
+//5 - 3;
+.mt-bs-2 {
+ margin-top: $spacer * .5;
+}
+
+.table-bs {
+ width: 100%;
+ margin-bottom: $spacer;
+ background-color: $table-bg;
+
+ th,
+ td {
+  padding: $table-cell-padding;
+  vertical-align: top;
+  border-top: $table-border-width solid $table-border-color;
+ }
+
+ thead th {
+  vertical-align: bottom;
+  border-bottom: (2 * $table-border-width) solid $table-border-color;
+ }
+
+ tbody+tbody {
+  border-top: (2 * $table-border-width) solid $table-border-color;
+ }
+
+ tbody tr td {
+  @include txt-center;
+ }
+
+ .table {
+  background-color: $body-bg;
+ }
+}
+
+.table-sm {
+
+ th,
+ td {
+  padding: $table-cell-padding-sm;
+ }
+}
+
+.mt-bs-1 {
+ margin-top: $spacer * .25;
+}
+
+.mb-bs-4 {
+ margin-bottom: $spacer * 1.5;
+}
+
+.pr-bs-5 {
+ padding-right: $spacer * 3;
+}
+
+table.table-report {
+ font-size: 70%;
+ width: 100%;
+ font-family: Arial, Helvetica, sans-serif;
+
+ & {
+  @include border-black;
+
+
+  & thead tr {
+   @include border-black;
+
+   & th {
+    font-size: 10px !important;
+    font-weight: 500;
+   }
+
+   & td.with-image:first-child {
+    width: 200px;
+    text-align: center;
+
+    & img {
+     height: 50px;
+    }
+   }
+  }
+
+  & thead tr td {
+   @include border-black;
+  }
+ }
+
+ & tbody tr {
+  @include border-black;
+ }
+}
+
+.label-15 {
+ font-size: 15px;
+}
+
+.table-date {
+ padding-left: 20px;
+ font-weight: bold;
+}
+
+.divider {
+ height: 3px !important;
+ background-color: $PRIMARY_COLOR !important;
+ @include mt(1rem);
+ @include mb(15px);
+}
+
+.divider-brown {
+ height: 2px !important;
+ background-color: $DARK_COLOR !important;
+ @include mt(.75rem);
+}
+
+table thead tr th {
+ font-size: .95rem !important;
+ @include border-bottom(1px);
+}
+
+footer {
+ text-align: center; //position: fixed;
+ bottom: 45px;
+ margin-bottom: 30px;
+ right: 0;
+ left: 0;
+}
+
+.font-small {
+ & span:first-child {
+  font-size: 10px;
+ }
+}
+
+#add-product-paper {
+ height: auto !important;
+}
+
+.font-smaller {
+ font-size: .75rem !important;
+}
+
+.font-md {
+ font-size: 1.05rem;
+}
+
+.bold {
+ font-weight: bold !important;
+}
+
+.icon-snackbar {
+ font-size: 20px;
+}
+
+.icon-variant {
+ margin-right: 8px;
+ opacity: .9;
+}
+
+.float-right {
+ float: right;
+}
+
+.float-left {
+ float: left;
+}
+
+.d-block {
+ display: block;
+}
+
+.span-snackbar {
+ align-items: 'center';
+ display: flex;
+}
+
+.span-snackbar span {
+ margin-top: 3px;
+}
+
+.title {
+ text-align: center;
+}
+
+.img-wrapper {
+ margin: 0 auto;
+ text-align: center;
+ display: block;
+ width: 86px;
+}
+
+.paper-height {
+ height: 700px;
+}
+
+.text-whito {
+ color: $WHITO !important;
+}
+
+.text-black {
+ color: $BLACK !important
+}
+
+.text-primary {
+ color: $PRIMARY_COLOR !important;
+}
+
+.text-success {
+ color: $SUCCESS_COLOR !important;
+}
+
+.text-dark {
+ color: $DARK_COLOR !important;
+}
+
+.primary-color {
+ background-color: $PRIMARY_COLOR !important;
+}
+
+.text-primary {
+ color: $PRIMARY_COLOR !important;
+}
+
+.error {
+ background-color: $ERROR_COLOR !important;
+}
+
+.warning {
+ background-color: $WARNING_COLOR !important;
+}
+
+.success {
+ background-color: $SUCCESS_COLOR !important;
+}
+
+.dark {
+ background-color: $DARK_COLOR !important;
+}
+
+label[data-shrink=false].small {
+ font-size: 15px;
+ transform: translate(14px, 16px) scale(1) !important;
+ -webkit-transform: translate(14px, 16px) scale(1)
+}
+
+label[data-shrink=true].small {
+ font-size: 1rem;
+ transform: translate(13px, -6px) scale(0.75) !important;
+ -webkit-transform: translate(11px, -6px) scale(0.75);
+}
+
+.half-1 {
+ height: 100% !important;
+ display: inline-block;
+ margin-top: -35px;
+ width: 50%;
+
+ & div {
+  display: block;
+  text-align: center;
+ }
+}
+
+tr.product-row td {
+ @include pb(1px);
+ @include pt(1px);
+ font-size: 0.8125rem;
+}
+
+.product-details-img {
+ width: 275px;
+ height: 275px;
+ float: right
+}
+
+.product-details-small {
+ width: 85px;
+ height: 85px;
+
+ & img {
+  border-radius: 3px;
+ }
+}
+
+#product-details {
+ height: 1200px !important;
+}
+
+.subheading-small {
+ font-weight: 700 !important;
+}
+
+.product-img {
+ width: 40px !important;
+ height: 40px !important;
+
+ & div img {
+  width: inherit;
+  height: inherit;
+ }
+}
+
+.paper-img {
+ width: 175px;
+ height: 175px;
+
+ & img {
+  width: inherit;
+  height: inherit;
+
+  &.product-image {
+   padding: 10px;
+  }
+ }
+}
+
+.paper-profile {
+ @include mid(120px)
+}
+
+.card-profile-image {
+ max-width: 350px;
+}
+
+.paper-banner {
+ width: 700px !important;
+ border-radius: 3.5px;
+ position: relative;
+
+ & img {
+  // width: 295% !important;
+  width: 100% !important;
+  height: inherit;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12) !important;
+ }
+
+ & button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+ }
+
+ & button svg {
+  border-radius: 5px;
+  background-color: $PINK_COLOR;
+  color: $PRIMARY_COLOR;
+
+  &:hover {
+   cursor: pointer;
+  }
+ }
+}
+
+// ul a.hoverListDrawer:hover {
+//  color: #de4747 !important;
+// }
+.arrow-up {
+ border-radius: ($ONE_HUNDERED / 2) !important;
+ background-color: rgb(49, 49, 49) !important;
+ width: 50px;
+ height: 50px;
+ position: fixed !important;
+ bottom: 20px;
+ right: 30px;
+ transition: all .8s ease-in-out;
+
+ & span {
+  transition: top 1.5s ease-in-out;
+ }
+
+ &:hover span {
+  top: 11px !important;
+  position: absolute
+ }
+
+ & svg {
+  color: $WHITO;
+ }
+
+ &:hover {
+  box-shadow: 0px 3px 4px rgb(70, 69, 69); // bottom: 23px;
+ }
+}
+
+#logout {
+ z-index: 1100;
+}
+
+.tooltip-btn {
+ width: 33.3%
+}
+
+.icon-product {
+ transition: all 0.35 ease;
+ color: $PRIMARY_COLOR;
+ cursor: pointer;
+ padding-right: 1px; //  & span svg {
+ //  }
+}
+
+#backBtn,
+#nxtBtn {
+ transition: all 0.35 ease;
+}
+
+.td-icons {
+ margin: 0 auto;
+}
+
+#backBtn:hover,
+#nxtBtn:hover {
+ background-color: $PRIMARY_COLOR;
+ color: $WHITO;
+}
+
+ul#sideBar {
+ border-right: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+ul a.hoverListDrawer {
+ padding-top: 9px;
+ padding-bottom: 9px;
+
+ &:hover {
+  & div svg {
+   color: $PRIMARY_COLOR !important;
+  }
+
+  & div span {
+   color: $PRIMARY_COLOR !important;
+  }
+ }
+
+ &.active-sidebar-item {
+  & div {
+   & svg {
+    color: $PRIMARY_COLOR !important;
+   }
+
+   & span {
+    color: $PRIMARY_COLOR !important;
+   }
+  }
+ }
+}
+
+.modal-header {
+ background-color: $PRIMARY_COLOR;
+
+ & h2 {
+  color: $WHITO !important
+ }
+}
+
+button.badge-color {
+ & span {
+  & span span {
+   background-color: #f50057 !important;
+  }
+ }
+}
+
+// ul a.hoverListDrawer.active {
+//  color: $PRIMARY_COLOR !important;
+// }
+ul div.MuiListItem-root-168 {
+ //  padding-top: 5px !important;
+ //  padding-bottom: 5px !important;
+ @include pt(0);
+ @include pb(0);
+}
+
+div[role="tooltip"] div {
+ padding: 10px 13px;
+ font-size: 13px;
+}
+
+.half-2 {
+ display: inline-block;
+ width: ($ONE_HUNDERED / 2);
+}
+
+.signup_wrapper {
+ @include mid(800px);
+ background-color: #fdfafa;
+ height: 730px;
+}
+
+.login_wrapper {
+ @include mid(400px); //max-width: 380px !important;
+ background-color: #fdfafa
+}
+
+.billing-smaller {
+ & h3 {
+  font-size: .75rem;
+ }
+
+ & h3.psmall {
+  padding-top: 3px !important;
+ }
+}
+
+.reset-password-wrapper {
+ @include mid(750px);
+ @include mb(3%);
+}
+
+.modal-loading {
+ position: absolute;
+ left: 48%;
+ top: 40%;
+ width: 60px !important;
+ height: 60px !important;
+}
+
+table#order-invoice-table {
+ & thead tr th {
+  color: $BLACK !important;
+ }
+}
+
+table {
+ display: table;
+ table-layout: fixed;
+ border-collapse: collapse;
+
+ &#products {
+  &.drawer-open {
+   & tr th {
+    font-size: 12px !important;
+   }
+
+   & tr td div svg {
+    font-size: 16px;
+   }
+
+   & tbody tr td {
+    font-size: 11px !important;
+   }
+  }
+
+  & thead tr th {
+   width: (100% / 9);
+   padding-right: 10px;
+   padding-left: 23px;
+  }
+ }
+
+ &#orders thead tr th {
+  width: (100% / 7);
+  padding-right: 15px;
+ }
+
+ &#orderEarnings thead tr th {
+  width: (100% / 6);
+  padding-right: 15px;
+ }
+
+ &#order-invoice-table {
+  & thead tr th {
+   @include pr(3px);
+
+   &:nth-child(4) {
+    @include pr(20px);
+    text-align: right;
+   }
+
+   &:last-child {
+    text-align: right;
+    @include pr(25px);
+   }
+  }
+
+  & tbody tr td {
+   @include pr(30px);
+
+   &:nth-child(4) {
+    text-align: right;
+   }
+
+   &:last-child {
+    text-align: right;
+   }
+  }
+ }
+}
+
+//styles for react tags
+.react-tagsinput {
+ background-color: $WHITO;
+ border-radius: 4px !important;
+ overflow: hidden;
+ @include pad(15px);
+ @include custom-border(2px, solid, #ccc);
+}
+
+.react-tagsinput--focused {
+ @include custom-border(2px, null, #1976d2);
+}
+
+.react-tagsinput-tag a::before {
+ content: " ×";
+}
+
+.react-tagsinput-remove {
+ cursor: pointer;
+ font-weight: bold;
+}
+
+.react-tagsinput-tag {
+ color: $BLACK;
+ border-radius: 3px !important;
+ background-color: rgba(238, 238, 238, 0);
+ font-size: 15px;
+ font-weight: 400;
+ box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+ @include d-inline;
+ @include custom-border(1px, solid, #ddd);
+ @include mb(5px);
+ @include mr(5px);
+ @include pad(7px);
+}
+
+.react-tagsinput-input {
+ background: $table-bg;
+ border: 0;
+ color: $BLACK;
+ font-size: 15px;
+ font-weight: 400;
+ width: 120px;
+ outline: none;
+ margin-bottom: 6px;
+ margin-top: 1px;
+ @include pad(5px);
+}
+
+code {
+ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.d-none {
+ @include d-none;
+}
+
+.d-inline {
+ @include d-inline;
+}
+
+.p-0 {
+ @include pad(0rem);
+}
+
+.p-1 {
+ @include pad(.8rem);
+}
+
+.p-2 {
+ @include pad(1.2rem);
+}
+
+.p-3 {
+ @include pad(1.5rem);
+}
+
+.mb-0 {
+ @include mb(0px)
+}
+
+.mb-1 {
+ @include mb(15px)
+}
+
+.mb-2 {
+ @include mb(20px)
+}
+
+.mb-3 {
+ @include mb(25px)
+}
+
+.mb-4 {
+ @include mb(30px)
+}
+
+.mt-small {
+ @include mt(.5rem);
+}
+
+.mt-5px {
+ @include mt(3px);
+}
+
+.mt-small-1 {
+ @include mt(.77rem);
+}
+
+.mr-small {
+ @include mr(.5rem);
+}
+
+.mt-0 {
+ @include mt(0)
+}
+
+.mt-1 {
+ @include mt(1rem)
+}
+
+.mt-2 {
+ @include mt(1.5rem)
+}
+
+.mt-3 {
+ @include mt(2.5rem)
+}
+
+.mt-4 {
+ @include mt(3.5rem)
+}
+
+.mt-5 {
+ @include mt(4.5rem)
+}
+
+.margin-small {
+ @include mr(.2rem)
+}
+
+.mr-1 {
+ @include mr(1rem)
+}
+
+.mr-2 {
+ @include mr(1.5rem)
+}
+
+.mr-3 {
+ @include mr(2.5rem)
+}
+
+.mr-4 {
+ @include mr(3.5rem)
+}
+
+.ml-1 {
+ @include ml(1rem)
+}
+
+.ml-2 {
+ @include ml(1.5rem)
+}
+
+.ml-3 {
+ @include ml(2.5rem)
+}
+
+.ml-4 {
+ @include ml(3.5rem)
+}
+
+.pr-0 {
+ @include pr(0);
+}
+
+.pt-0 {
+ @include pt(0);
+}
+
+.pt-1 {
+ @include pt(0.75rem);
+}
+
+.m-20 {
+ margin: 20px;
+}
+
+.p-20 {
+ @include pad(20px);
+}
+
+.p-10 {
+ @include pad(10px);
+}
+
+.m-10 {
+ margin: 10px;
+}
+
+.red {
+ color: $ERROR_COLOR !important;
+}
+
+.m-30 {
+ margin: 30px;
+}
+
+.p-30 {
+ @include pad(30px);
+}
+
+.pt-2 {
+ @include pt(1.5rem);
+}
+
+.mt-2-0 {
+ @include mt(2rem);
+}
+
+.pt-3 {
+ @include pt(2.5rem);
+}
+
+.pb-0 {
+ @include pb(0);
+}
+
+.pb-1 {
+ @include pb(0.75rem);
+}
+
+.pb-2 {
+ @include pb(1.5rem);
+}
+
+.pb-3 {
+ @include pb(2.5rem);
+}
+
+.pr-1 {
+ @include pr(1rem);
+}
+
+.pr-2 {
+ @include pr(1.5rem);
+}
+
+.pr-3 {
+ @include pr(2.5rem);
+}
+
+.pr-4 {
+ @include pr(3.5rem);
+}
+
+.pl-0 {
+ @include pl(0);
+}
+
+.pl-1 {
+ @include pl(1rem);
+}
+
+.pl-2 {
+ @include pl(1.5rem);
+}
+
+.pl-3 {
+ @include pl(2.5rem);
+}
+
+.pl-4 {
+ @include pl(3.5rem);
+}
