@@ -19,7 +19,7 @@
     "@types/redux-persist": "^4.3.1",
     "@types/redux-persist-transform-encrypt": "^2.0.1",
     "@types/redux-thunk": "^2.1.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "currency.js": "^1.2.1",
     "date-fns": "^2.0.0-alpha.21",
     "form-data": "^2.3.3",
